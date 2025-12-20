@@ -50,10 +50,19 @@
             var dates2026Spring = ["January 20", "January 22", "January 27", "January 29", "February 3", "February 5", "February 10", "February 12", "February 19", "February 24", "February 26", "March 3", "March 5", "March 17", "March 19", "March 24", "March 26", "March 31", "April 2", "April 7", "April 9", "April 14", "April 16", "April 21", "April 23", "April 28", "April 30"];
             // this should always be the current semester
             var dates = dates2026Spring;
+            
             if (d >= 0 && d < 27)
                 return dates[d];
             else
                 return "TBA";
+        }
+        function semesterDay(semester_start,days_after) {
+            //input: semester_start in milliseconds, days_after integer
+            var oneDay = 24 * 60 * 60 * 1000;
+            var cur_date = new Date(semester_start+days_after*oneDay);
+            var options = { month: 'long', day: 'numeric' };
+            var date_string = cur_date.toLocaleDateString('en-US', options)
+            return date_string;
         }
         var cday = 0;
         var rday = 0;
@@ -61,6 +70,8 @@
         var review = 1;
         var techq = 1;
         var studpres = 1;
+        var firstDayString = classDay(0) + " " + new Date().getFullYear(); //e.g., "January 20 2026"
+        var firstClassDate = new Date(firstDayString).getTime(); //milliseconds
     </script>
 
 </head>
@@ -189,15 +200,14 @@
                 </p>
                 </div> -->
 
-                <!-- <div class="alert alert-danger text-center" role="alert" style="margin-top:-0.25cm;">
+                <div class="alert alert-danger text-center" role="alert" style="margin-top:-0.25cm;">
                     <p><strong>Note: </strong> The material of the website is currently updated. Please visit periodically to monitor updates as the beginning of the semester approaches.
                     </p>
-                </div> -->
-                <div class="alert alert-success text-center" role="alert" style="margin-top:-0.25cm;">
-                    <p><strong>Note: </strong> The material of the website is currently updated. Please visit periodically to monitor updates as the beginning of the semester approaches. 
-                    <!-- <p><strong>Note: </strong> The class schedule is now finalized, however, monitor the website for any updates during the semester. -->
-                    </p>
                 </div>
+                <!-- <div class="alert alert-success text-center" role="alert" style="margin-top:-0.25cm;">
+                    <p><strong>Note: </strong> The class schedule is now finalized, however, monitor the website for any updates during the semester.
+                    </p>
+                </div> -->
         </div>
 
         <div class="row">
@@ -300,7 +310,7 @@
                     <!-- <li> The schedule is populated with the papers to discuss. </li> -->
                     <!-- <li> Updated <a href="documents/CS561-Spring2023-syllabus.pdf" target="_blank">syllabus</a> is now online (subject to changes). </li> -->
                     <!-- <li> No lab on Jan 19! First class on Jan 22.</li> -->
-                    <li> Semester starts on <script type="text/javascript">document.write(dates[0]);</script> - stay tuned for updates.</li>
+                    <li> Semester starts on <script type="text/javascript">document.write(classDay(0));</script> - stay tuned for updates.</li>
                     <li> See updates and announcements in <a href="https://piazza.com/bu/spring2026/cs561/">Piazza</a>.</li>
                 </ul>
                 <br>
@@ -324,18 +334,18 @@
                     <!-- <li>January 31, last day to add (any) class</li> -->
                     <!-- <li>February 9th, select a project</li> -->
                     <!-- <li>February 19th, decide the semester project (which you have discussed in OH)</li> -->
-                    <li>January 31, submit project 0</li>
-                    <li>February 14, submit project 1</li>
-                    <li>February 23, submit your project proposal</li>
-                    <li><strong>February 25, last day to drop (without a "W")</strong></li>
-                    <li>March 3 - March 7, meet with your assigned mentor (graded)</li>
-                    <li>March 6, Student-led discussion</li>
-                    <li>March 22, submit your mid-semester progress report</li>
-                    <li>March 27, Student-led discussion</li>
-                    <li>March 31 - April 11, meet with your assigned mentor (graded)</li>
-                    <li><strong>April 4, last day to drop (with a "W")</strong></li>
-                    <li>April 8, Student-led discussion</li>
-                    <li>May 3, final submission of project code and report</li>
+                    <li><script>document.write(semesterDay(firstClassDate,10));</script>, submit project 0</li>
+                    <li><script>document.write(semesterDay(firstClassDate,24));</script>, submit project 1</li>
+                    <li><script>document.write(semesterDay(firstClassDate,33));</script>, submit your project proposal</li>
+                    <li><strong>February 24, last day to drop (without a "W")</strong></li>
+                    <li><script>document.write(semesterDay(firstClassDate,41));</script> - <script>document.write(semesterDay(firstClassDate,45));</script>, meet with your assigned mentor (graded)</li>
+                    <li>TBA, Student-led discussion</li>
+                    <li><script>document.write(semesterDay(firstClassDate,60));</script>, submit your mid-semester progress report</li>
+                    <li>TBA, Student-led discussion</li>
+                    <li><script>document.write(semesterDay(firstClassDate,69));</script> - <script>document.write(semesterDay(firstClassDate,80));</script>, meet with your assigned mentor (graded)</li>
+                    <li><strong>April 3, last day to drop (with a "W")</strong></li>
+                    <li>TBA, Student-led discussion</li>
+                    <li><script>document.write(semesterDay(firstClassDate,102));</script>, final submission of project code and report</li>
                     <!-- <li>April 23rd, submit your draft project presentation for review prior to presentation</li> -->
                     <!-- <li>April 25th 11:59pm, submit your final project report/code (draft version) </li> -->
                     <!-- <li>April 27th and April 29th, project presentation (in class)</li> -->
