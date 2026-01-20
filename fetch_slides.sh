@@ -17,6 +17,6 @@ if [ $? -ne 0 ]; then
     exit
 fi
 git add slides/*
-git commit -m "CS660: adding new slides"
+git commit -m "CS561: adding new slides"
 git push
 set +x
