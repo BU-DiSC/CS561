@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -x
-cp ~/Dropbox/Professional/Professorship/W-Lab/CS561-Spring2025/slides-PDFs/*.pdf ./slides
+cp ~/Dropbox/Professional/Professorship/W-Lab/CS561-Spring2026/slides-PDFs/*.pdf ./slides
 # cp ~/Dropbox/Professional/Professorship/0_CLASSES/CS561-Spring2025/Slides-PDF/*.pdf ./slides
 # cp  ~/Repos/cs460-660-materials/_cs660-slides-pdf/*.pdf slides/
 
