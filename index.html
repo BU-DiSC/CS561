@@ -551,7 +551,7 @@
                         Class
                         <script type="text/javascript">
                             document.write(cday + 1)
-                        </script>: Log-Structured Merge (LSM) Trees & Compaction & Deletes
+                        </script>: Log-Structured Merge (LSM) Trees & Compaction 
                     </h3>
                     <p class="post-meta">
                         <script type="text/javascript">
@@ -565,12 +565,42 @@
                         <ul class="mylist">
                             <li><a target="_blank" style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CAS-CS561-Class6.pdf">Slides</a> </li>
                             <li class="tech-question"><font color="#cc0000"><strong>Technical Question <script type="text/javascript">document.write("T"+(techq++)); </script>:</strong></font> <em class="tech-question-text">What is the key design idea of Dostoevsky to address the limitations of existing merge policies? Explain how does this design affect the point lookups and range (short and long) lookups. </em> </li>
+                            <li><a href="https://arxiv.org/abs/1812.07527">LSM-based Storage Techniques: A Survey</a>, arXiv 2018</li>
                             <li><a href="https://dl.acm.org/doi/10.1145/3183713.3196927">Dostoevsky: Better Space-Time Trade-Offs for LSM-Tree Based Key-Value Stores via Adaptive Removal of Superfluous Merging</a>, SIGMOD 2018 (<strong>Paper for TQ</strong>) [<a href="https://www.youtube.com/watch?v=fmXgXripmh0"
                                 target="_blank">conf. present. video</a>]</li>
                             <li><a href="https://dl.acm.org/doi/10.1145/3514221.3522563"> Dissecting, Designing, and Optimizing LSM-based Data Stores</a>, SIGMOD 2022 [<a href="https://cs-people.bu.edu/mathan/publications/slides/sigmod2022-Tutorial.pdf">slides</a>, <a href="https://www.youtube.com/watch?v=hkMkBZn2mGs">conf. present. video</a>]</li>
                             <li><a href="http://vldb.org/pvldb/vol14/p2216-sarkar.pdf">Constructing and Analyzing the LSM Compaction Design Space</a>, VLDB 2021 </li>
                             <li><a href="https://dl.acm.org/doi/10.1145/3035918.3064054"> Monkey: Optimal Navigable Key-Value Store</a>, SIGMOD 2020 </li>
                             <li><a href="https://dl.acm.org/doi/10.1145/3514221.3520169"> Compactionary: A Dictionary for LSM Compactions</a>, SIGMOD 2022 [<a href="https://disc-projects.bu.edu/compactionary/#interactiveDemo">DEMO</a>]</li>
+                        </ul>
+                    </p>
+
+                    <h3 class="post-subtitle">
+                        <script type="text/javascript">
+                            document.write("<a id=\"class" + (cday + 1) + "\"></a>");
+                        </script>
+                        Class
+                        <script type="text/javascript">
+                            document.write(cday + 1)
+                        </script>: Deletes on LSM Trees 
+                    </h3>
+                    <p class="post-meta">
+                        <script type="text/javascript">
+                            document.write(classDay(rday + cday + cancelday));
+                            cday++;
+                        </script>
+                    </p>
+                    <p class="post-content">
+
+                        <h4>Readings</h4>
+                        <ul class="mylist">
+                            <li><a target="_blank" style="font-size:18px; text-decoration: underline;" tabindex="-1" href="./slides/CAS-CS561-Class6.pdf">Slides</a> </li>
+                            <li class="tech-question"><font color="#cc0000"><strong>Technical Question <script type="text/javascript">document.write("T"+(techq++)); </script>:</strong></font> <em class="tech-question-text">TBA </em> </li>
+                            <li><a href="https://dl.acm.org/doi/pdf/10.1145/3318464.3389757">Lethe: A Tunable Delete-Aware LSM Engine</a>, SIGMOD 2020 (<strong>Paper for TQ</strong>) [<a href="https://www.youtube.com/watch?v=qr1MniqOTdA" target="_blank">conf. present. video</a>]</li>
+                            <li><a href="https://openproceedings.org/2022/conf/edbt/paper-131.pdf">Query Language Support for Timely Data Deletion</a>, EDBT 2022 [<a href="https://www.youtube.com/watch?v=lcWj6b8EKFg" target="_blank">conf. present. video</a>]</li>
+                            <li><a href="http://sites.computer.org/debull/A22mar/p21.pdf">Building Deletion-Compliant Data Systems</a>, IEEE Data Eng. Bull. 2022</li>
+                            <li><a href="https://dl.acm.org/doi/pdf/10.1145/3555041.3589719">Acheron: Persisting Tombstones in LSM Engines</a>, SIGMOD 2023 [<a href="https://disc-projects.bu.edu/acheron/" target="_blank">demo</a>, <a href="https://www.youtube.com/watch?v=irjcsT_qhoY" target="_blank">conf. present. video</a>]</li>
+                            <li><a href="https://dl.acm.org/doi/pdf/10.1145/3599724">Enabling Timely and Persistent Deletion in LSM-Engines</a>, TODS 2023</li>
                         </ul>
                     </p>
 
