@@ -48,8 +48,9 @@
             var dates2024Spring = ["January 22", "January 24", "January 29", "January 31", "February 5", "February 7", "February 12", "February 14", "February 21", "February 26", "February 28", "March 4", "March 6", "March 18", "March 20", "March 25", "March 27", "April 1", "April 3", "April 8", "April 10", "April 17", "April 22", "April 24", "April 29", "May 1"];
             var dates2025Spring = ["January 21", "January 23", "January 28", "January 30", "February 4", "February 6", "February 11", "February 13", "February 20", "February 25", "February 27", "March 4", "March 6", "March 18", "March 20", "March 25", "March 27", "April 1", "April 3", "April 8", "April 10", "April 15", "April 17", "April 22", "April 24", "April 29", "May 1" ];
             var dates2026Spring = ["January 20", "January 22", "January 27", "January 29", "February 3", "February 5", "February 10", "February 12", "February 19", "February 24", "February 26", "March 3", "March 5", "March 17", "March 19", "March 24", "March 26", "March 31", "April 2", "April 7", "April 9", "April 14", "April 16", "April 21", "April 23", "April 28", "April 30"];
+            var dates2027Spring = ["January 19", "January 21", "January 26", "January 28", "February 2", "February 4", "February 9", "February 11", "February 18", "February 23", "February 25", "March 2", "March 4", "March 16", "March 18", "March 23", "March 25", "March 30", "April 1", "April 6", "April 8", "April 13", "April 15", "April 20", "April 22", "April 27", "April 29"];
             // this should always be the current semester
-            var dates = dates2026Spring;
+            var dates = dates2027Spring;
             
             if (d >= 0 && d < 27)
                 return dates[d];
@@ -70,7 +71,8 @@
         var review = 1;
         var techq = 1;
         var studpres = 1;
-        var firstDayString = classDay(0) + " " + new Date().getFullYear(); //e.g., "January 20 2026"
+        var semesterYear = 2027; // update together with the dates array above
+        var firstDayString = classDay(0) + " " + semesterYear; //e.g., "January 19 2027"
         var firstClassDate = new Date(firstDayString).getTime(); //milliseconds
     </script>
 
@@ -114,7 +116,7 @@
                         <a href="https://www.gradescope.com/courses/1202939" target="_blank">Gradescope</a>
                     </li>
                     <li>
-                        <a href="https://piazza.com/bu/spring2026/cs561/" target="_blank">Piazza</a>
+                        <a href="https://piazza.com/bu/spring2027/cs561/" target="_blank">Piazza</a>
                     </li>
                     <li>
                         <a href="https://disc.bu.edu/" target="_blank">DiSC lab</a>
@@ -200,14 +202,14 @@
                 </p>
                 </div> -->
 
-                <!-- <div class="alert alert-danger text-center" role="alert" style="margin-top:-0.25cm;">
+                <div class="alert alert-danger text-center" role="alert" style="margin-top:-0.25cm;">
                     <p><strong>Note: </strong> The material of the website is currently updated. Please visit periodically to monitor updates as the beginning of the semester approaches.
                     </p>
-                </div> -->
-                <div class="alert alert-success text-center" role="alert" style="margin-top:-0.25cm;">
+                </div>
+                <!-- <div class="alert alert-success text-center" role="alert" style="margin-top:-0.25cm;">
                     <p><strong>Note: </strong> The class schedule is now finalized, however, monitor the website for any updates during the semester.
                     </p>
-                </div>
+                </div> -->
         </div>
 
         <div class="row">
@@ -228,19 +230,19 @@
             </div> -->
 
             <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 text-center">
-                <p>Class: Tue/The 11:00am-12:15pm <a href="https://www.bu.edu/classrooms/classroom/cas-228/" target="_blank">(CAS 228)</a></a>
+                <p>Class: Tue/Thu 11:00am-12:15pm <a href="https://www.bu.edu/classrooms/classroom/cas-226/" target="_blank">(CAS 226)</a>
                     <br>
 				Instructor: <a href="http://cs-people.bu.edu/mathan/" target="_blank">Manos Athanassoulis</a>&nbsp;<a href="mailto:mathan@bu.edu?subject=[CS561]"><i class="fa fa-envelope"></i></a></p>
-                <p>Lab: Fri 2:30-3:20pm <a href="https://maps.bu.edu/?id=647#!m/558432?share" target="_blank">(CDS 701)</a>
-                    <br> Teaching Fellow: <em><a href="http://cs-people.bu.edu/teona/" target="_blank">Teona Bagashvili</a></em>&nbsp;
-                    <a href="mailto:teona@bu.edu?subject=[CS561]"><i class="fa fa-envelope"></i></a>
+                <p>Labs: Fri 1:25-2:15pm &amp; Fri 2:30-3:20pm (SOC B59, 100 Cummington Mall)
+                    <br> Teaching Assistant: <em><a href="https://aquaorifice.github.io/" target="_blank">Anwesha Saha</a></em>&nbsp;
+                    <a href="mailto:anwesha@bu.edu?subject=[CS561]"><i class="fa fa-envelope"></i></a>
 			</div>
 			<div class="col-lg-4 col-md-4 text-center">
 				<p> Office: CDS 928<br>
-				Office Hours: <a href="https://piazza.com/bu/spring2026/cs561/staff" target="_blank">Posted on Piazza</a> </p>
+				Office Hours: <a href="https://piazza.com/bu/spring2027/cs561/staff" target="_blank">Posted on Piazza</a> </p>
 				<p>
-                    Discussion on <a href="https://piazza.com/bu/spring2026/cs561" target="_blank">Piazza</a> / Grades on <a href="https://www.gradescope.com/courses/1202939" target="_blank">Gradescope</a>
-                    <br>TF Office Hours: <a href="https://piazza.com/bu/spring2026/cs561/staff" target="_blank">Posted on Piazza</a> 
+                    Discussion on <a href="https://piazza.com/bu/spring2027/cs561" target="_blank">Piazza</a> / Grades on <a href="https://www.gradescope.com/courses/1202939" target="_blank">Gradescope</a>
+                    <br>TA Office Hours: <a href="https://piazza.com/bu/spring2027/cs561/staff" target="_blank">Posted on Piazza</a> 
                 </p>
 			</div>
         </div>
@@ -311,7 +313,7 @@
                     <!-- <li> Updated <a href="documents/CS561-Spring2023-syllabus.pdf" target="_blank">syllabus</a> is now online (subject to changes). </li> -->
                     <!-- <li> No lab on Jan 19! First class on Jan 22.</li> -->
                     <li> Semester starts on <script type="text/javascript">document.write(classDay(0));</script> - stay tuned for updates.</li>
-                    <li> See updates and announcements in <a href="https://piazza.com/bu/spring2026/cs561/">Piazza</a>.</li>
+                    <li> See updates and announcements in <a href="https://piazza.com/bu/spring2027/cs561/">Piazza</a>.</li>
                 </ul>
                 <br>
                 <br>
@@ -334,19 +336,19 @@
                     <!-- <li>January 31, last day to add (any) class</li> -->
                     <!-- <li>February 9th, select a project</li> -->
                     <!-- <li>February 19th, decide the semester project (which you have discussed in OH)</li> -->
-                    <li>Feb 1, submit project 0</li>
-                    <li>Feb 15, submit project 1</li>
-                    <li>Feb 22, submit your project proposal</li>
-                    <li><strong>February 24, last day to drop (without a "W")</strong></li>
+                    <li>Jan 31, submit project 0</li>
+                    <li>Feb 14, submit project 1</li>
+                    <li>Feb 21, submit your project proposal</li>
+                    <li><strong>February 23, last day to drop (without a "W")</strong></li>
                     <li><script>document.write(semesterDay(firstClassDate,41));</script> - <script>document.write(semesterDay(firstClassDate,45));</script>, meet with your assigned mentor (graded)</li>
-                    <li>Mar 22, submit your mid-semester progress report</li>
+                    <li>Mar 21, submit your mid-semester progress report</li>
                     <li><script>document.write(semesterDay(firstClassDate,69));</script> - <script>document.write(semesterDay(firstClassDate,80));</script>, meet with your assigned mentor (graded)</li>
-                    <li>Mar 31, Student-led discussion</li>
-                    <li>Apr 2, Student-led discussion</li>
-                    <li><strong>April 3, last day to drop (with a "W")</strong></li>
-                    <li>Apr 7, Student-led discussion</li>
-                    <li>Apr 9, Student-led discussion</li>
-                    <li>May 3, final submission of project code and report</li>
+                    <li>Mar 30, Student-led discussion</li>
+                    <li>Apr 1, Student-led discussion</li>
+                    <li><strong>April 2, last day to drop (with a "W")</strong></li>
+                    <li>Apr 6, Student-led discussion</li>
+                    <li>Apr 8, Student-led discussion</li>
+                    <li>May 2, final submission of project code and report</li>
                     <!-- <li>April 23rd, submit your draft project presentation for review prior to presentation</li> -->
                     <!-- <li>April 25th 11:59pm, submit your final project report/code (draft version) </li> -->
                     <!-- <li>April 27th and April 29th, project presentation (in class)</li> -->
